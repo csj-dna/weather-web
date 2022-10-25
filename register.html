@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join now</title>
+    <!-- logo -->
+    <link rel="icon" type="image/jpeg" href="/images/logo1.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body id="logIn-body">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+      <div class="container">
+        <a class="navbar-brand ms-3 text-dark" href="/index.html">
+          <img src="/images/logo1.png" class="nav-logo" alt="" />
+          anytime
+        </a>
+        <a href="/index.html" class="nav-link text-white logIn__nav-link"
+          >Experts</a
+        >
+        <a href="/weather-app.html" class="nav-link text-white logIn__nav-link"
+          >Weather</a
+        >
+        <a href="/index.html" class="nav-link text-white logIn__nav-link"
+          >Stories</a
+        >
+      </div>
+    </nav>
+    <section class="Form my-4 mx-5">
+      <div class="container my-5 py-5">
+        <div class="row justify-content-md-center logInForm__row">
+          <div class="col-lg-5 logInForm__bg">
+            <img
+              src="/images/travel-in-your-hand.png"
+              class="logInForm__img2"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-7 px-5 pt-5">
+            <a class="navbar-brand mb-3 text-dark" href="#">
+              <img src="/images/logo1.png" class="nav-logo" alt="" /> anytime
+            </a>
+            <h4>First step to your dream trip</h4>
+
+            <form action="" method="POST" class="form-action" id="form-1">
+              <!-- row1 -->
+              <div class="form-row form-group">
+                <div class="col-lg-7">
+                  <label for="fullname" class="form-label">Your username</label>
+                  <input
+                    id="fullname"
+                    name="fullname"
+                    type="text"
+                    placeholder="andythegril"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+              </div>
+              <!-- row2 -->
+              <div class="form-row form-group">
+                <div class="col-lg-7">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="text"
+                    placeholder="email@domain.com"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+              </div>
+              <!-- row3 -->
+              <div class="form-row form-group">
+                <div class="col-lg-7">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="Your Password"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+              </div>
+              <!-- row4 -->
+              <div class="form-row form-group">
+                <div class="col-lg-7">
+                  <label for="password_confirmation" class="form-label"
+                    >Re-enter your Password</label
+                  >
+                  <input
+                    id="password_confirmation"
+                    name="password_confirmation"
+                    placeholder="Re-enter password"
+                    type="password"
+                    class="form-control"
+                  />
+                  <span class="form-message"></span>
+                </div>
+              </div>
+              <button class="form-submit">Register</button>
+              <p style="text-align: left" class="mt-3">
+                Already a member? <a href="/login.html">Login</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="register.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mong muốn của chúng ta
+        Validator({
+          form: "#form-1",
+          formGroupSelector: ".form-group",
+          errorSelector: ".form-message",
+          rules: [
+            Validator.isRequired("#fullname", "Please fill in your username"),
+            Validator.isEmail("#email"),
+            Validator.minLength("#password", 6),
+            Validator.isRequired("#password_confirmation"),
+            Validator.isConfirmed(
+              "#password_confirmation",
+              function () {
+                return document.querySelector("#form-1 #password").value;
+              },
+              "Mật khẩu nhập lại không chính xác"
+            ),
+          ],
+          onSubmit: function (data) {
+            // Call API
+            console.log(data);
+          },
+        });
+
+        Validator({
+          form: "#form-2",
+          formGroupSelector: ".form-group",
+          errorSelector: ".form-message",
+          rules: [
+            Validator.isEmail("#email"),
+            Validator.minLength("#password", 6),
+          ],
+          onSubmit: function (data) {
+            // Call API
+            console.log(data);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

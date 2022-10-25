@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>anytime | WEATHER</title>
+    <link rel="icon" type="image/jpeg" href="/images/logo1.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="weather-body">
+      <header class="header">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+          <div class="container">
+            <a class="navbar-brand ms-3 text-dark" href="/index.html">
+              <img src="/images/logo1.png" class="nav-logo" alt="" />
+              anytime
+            </a>
+            <a href="/index.html" class="nav-link text-white logIn__nav-link"
+              >Experts</a
+            >
+            <a href="/index.html" class="nav-link text-white logIn__nav-link"
+              >Stories</a
+            >
+            <a href="/login.html" class="nav-link text-white logIn__nav-link"
+              >Login</a
+            >
+          </div>
+        </nav>
+      </header>
+      <!-- Header done -->
+      <div class="card-container">
+        <div class="weather-card">
+          <div class="search">
+            <input
+              type="text"
+              id="city-name-search"
+              name="search-city-name"
+              class="search-bar"
+              placeholder="Search for city"
+            />
+            <button class="weatherBtn" onclick="return validate2()">
+              <i class="fa fa-search"></i>
+            </button>
+            <p id="error2"></p>
+          </div>
+          <div class="weather loading">
+            <h2 class="city">Weather in Denver</h2>
+            <h1 class="temp">51°C</h1>
+            <div class="d-flex">
+              <img
+                width="50px"
+                height="50px"
+                src="https://openweathermap.org/img/wn/04n@2x.png"
+                alt=""
+                class="icon"
+              />
+              <div class="description">Cloudy</div>
+            </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind speed: 6.2km/h</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JS -->
+    </section>
+    <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
