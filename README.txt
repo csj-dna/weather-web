@@ -1,6 +1,3 @@
-My Team is AT, including:
-+ Đinh Nguyệt Ánh - 2059003
-+ Trầm Thị Tuyết Thanh - 2059054
 
 We was initially going for a simple weather web app, but then we added more features and focused on the UI to make it better
 
